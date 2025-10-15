@@ -1,0 +1,9 @@
+id,section_title,document_id
+e2dba5c0-c211-403f-ab9c-356ad0214128,Introduction,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+5e6e11bf-46ff-466d-8930-93935e78e5b2,Related Work,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+ece312b2-cdb5-4aa7-aa26-ef637dce1352,Fine-Grained Citation Context,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+128f9241-3aca-4267-a96a-7fd3f1bcd322,Dataset Construction,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+1027d4e7-98b4-4ced-b70e-d16d88a83b3e,Citation Context Extraction,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+461213f5-c23f-478e-bcb8-300dfd519278,Citation Context Classification,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+7224334f-82dd-4487-adcb-32187534e441,Classification model.,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
+9b59bdc5-5a07-49b4-8402-0743224a558d,Conclusion,91cbfc69-b10e-4658-b9ee-34f50bd25ec4
