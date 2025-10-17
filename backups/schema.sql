@@ -462,9 +462,9 @@ ALTER TABLE ONLY "public"."sections"
 
 
 
-CREATE POLICY "Annotations are viewable by owners, reviewers, and admins." ON "public"."annotations" FOR SELECT USING ((("auth"."uid"() = "user_id") OR ((( SELECT "profiles"."role"
+CREATE POLICY "Annotations are viewable by owners, reviewers, and admins." ON "public"."annotations" FOR SELECT USING (((( SELECT "auth"."uid"() AS "uid") = "user_id") OR ((( SELECT "profiles"."role"
    FROM "public"."profiles"
-  WHERE ("profiles"."id" = "auth"."uid"())))::"text" = ANY ((ARRAY['admin'::character varying, 'reviewer'::character varying])::"text"[]))));
+  WHERE ("profiles"."id" = ( SELECT "auth"."uid"() AS "uid"))))::"text" = ANY (ARRAY[('admin'::character varying)::"text", ('reviewer'::character varying)::"text"]))));
 
 
 
@@ -492,7 +492,7 @@ CREATE POLICY "Sections are viewable by everyone." ON "public"."sections" FOR SE
 
 
 
-CREATE POLICY "Users can update own Annotations." ON "public"."annotations" FOR UPDATE USING (("auth"."uid"() = "user_id"));
+CREATE POLICY "Users can update own Annotations." ON "public"."annotations" FOR UPDATE USING ((( SELECT "auth"."uid"() AS "uid") = "user_id"));
 
 
 
